@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container h1 {
+    color: white;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 160px;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+.dataNotFind {
+    color: white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.container form input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.container form button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.container form button:hover {
+    background-color: rgb(49, 49, 49);
+    color: white;
+    border: none;
+}
+

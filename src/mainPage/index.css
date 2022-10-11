@@ -1,0 +1,39 @@
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.mainPage button {
+    background-color: orangered;
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.mainPage button:hover {
+    background-color: rgb(197, 53, 0);
+}
+
+@media (max-width: 425px) {
+    .mainPage {
+        font-size: 23px;
+    }
+    
+    .mainPage button {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .mainPage {
+        font-size: 55px;
+    }
+}
