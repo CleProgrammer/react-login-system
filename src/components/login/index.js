@@ -9,18 +9,20 @@ export default function Login() {
     let data = [
         {
             email: localStorage.getItem('saveEmail'),
-            senha: localStorage.getItem('saveKey')
+            key: localStorage.getItem('saveKey')
         }
     ]
 
     const login = (e) => {
-        if(a('.emailLogin').value != data.map((item) => item.email)) {
+        if(a('.emailLogin').value != data.map((item) => item.email) || a('.keyLogin').value != data.map((item) => item.key)) {
             e.preventDefault()
 
-            let newDiv = document.createElement('div')
-            newDiv.setAttribute('class', 'dataNotFind')
-            a('.buttonLogin').after(newDiv)
-            a('.dataNotFind').innerHTML = 'Email ou senha não encontrado'
+            if(!a('.dataNotFind')) {
+                let newDiv = document.createElement('div')
+                newDiv.setAttribute('class', 'dataNotFind')
+                a('.linkMainPage').after(newDiv)
+                a('.dataNotFind').innerHTML = 'Email ou senha não encontrado'
+            }
         }
     }
 
@@ -30,7 +32,7 @@ export default function Login() {
         <form method='GET' className='formLogin'>
             <input type='email' placeholder='Email' className='emailLogin'></input>
             <input placeholder='Senha' className='keyLogin'></input>
-            <Link to='/mainpage'><button onClick={login} className='buttonLogin'>Login</button></Link>
+            <Link to='/mainpage' className='linkMainPage'><button onClick={login} className='buttonLogin'>Login</button></Link>
         </form>
     </div>
   )
